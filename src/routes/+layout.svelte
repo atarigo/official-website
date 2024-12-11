@@ -30,12 +30,10 @@
   </script>
 </svelte:head>
 
-<div class="container mx-auto">
-  <div class="grid h-screen grid-rows-[auto_1fr_auto]">
-    <Header />
-    <main class="md:p-8">
-      {@render children()}
-    </main>
-    <Footer />
-  </div>
+<div class="grid h-screen grid-rows-[auto_1fr_auto]">
+  <Header />
+  <main class="container mx-auto md:p-8">
+    {@render children()}
+  </main>
+  <Footer />
 </div>
