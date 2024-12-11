@@ -1,7 +1,7 @@
 <script lang="ts">
-  import { IconMenu } from "@tabler/icons-svelte";
   import HeaderAction from "./header-action.svelte";
   import HeaderBand from "./header-band.svelte";
+  import HeaderHamburger from "./header-hamburger.svelte";
   import HeaderNavigate from "./header-navigate.svelte";
 
   // todo: enhance header styles
@@ -17,14 +17,8 @@
 <header class="border-nature-100 sticky top-0 z-10 border-b bg-background/60 backdrop-blur-sm">
   <div class="between middle container mx-auto flex gap-4 p-4">
     <HeaderBand {title} />
-    <div class="md:black hidden">
-      <HeaderNavigate />
-      <HeaderAction />
-    </div>
-    <div class="md:hidden">
-      <button>
-        <IconMenu />
-      </button>
-    </div>
+    <HeaderNavigate />
+    <HeaderAction />
+    <HeaderHamburger />
   </div>
 </header>

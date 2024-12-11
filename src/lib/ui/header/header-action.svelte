@@ -19,6 +19,6 @@
   });
 </script>
 
-<div>
+<div class="hidden md:block">
   <input bind:this={inputElement} type="text" placeholder="Search" class="rounded px-2" />
 </div>
