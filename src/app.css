@@ -1,3 +1,150 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+@layer base {
+  /* use Shadcn UI colors */
+
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --border: 240 5.9% 90%;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --border: 240 3.7% 15.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply bg-background text-foreground overscroll-none;
+  }
+
+  /* scrollbar styling. */
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--border));
+    border-radius: 4px;
+  }
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--border)) transparent;
+  }
+}
+
+@layer base {
+  h1 {
+    @apply scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl;
+  }
+  h2 {
+    @apply scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0;
+  }
+  h3 {
+    @apply scroll-m-20 text-2xl font-semibold tracking-tight;
+  }
+  h4 {
+    @apply scroll-m-20 text-xl font-semibold tracking-tight;
+  }
+  /* skip h5 and h6 */
+  p {
+    @apply leading-7 [&:not(:first-child)]:mt-6;
+  }
+  blockquote {
+    @apply mt-6 border-l-2 pl-6 italic;
+  }
+  a {
+    @apply font-semibold text-sky-600 underline-offset-4 hover:underline;
+  }
+  pre {
+    @apply border-border rounded-md border;
+  }
+  code {
+    @apply bg-muted relative rounded px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold;
+  }
+  kbd {
+    @apply bg-muted text-muted-foreground rounded px-[0.15rem] py-[0.2rem] font-mono text-xs font-medium;
+  }
+}
+
+@layer base {
+  /* Use skeleton styles of del and ins */
+  del,
+  ins {
+    @apply relative block p-0.5 pl-5;
+    text-decoration: none;
+  }
+  ins::before,
+  del::before {
+    @apply absolute left-1;
+  }
+
+  ins::before {
+    content: "+";
+  }
+  del::before {
+    content: "−";
+  }
+
+  ins {
+    @apply bg-green-500;
+  }
+  del {
+    @apply bg-red-500;
+  }
+}
+
+@layer components {
+  .flex.left {
+    @apply justify-start;
+  }
+  .flex.center {
+    @apply justify-center;
+  }
+  .flex.right {
+    @apply justify-end;
+  }
+  .flex.between {
+    @apply justify-between;
+  }
+  .flex.around {
+    @apply justify-around;
+  }
+
+  .flex.top {
+    @apply items-start;
+  }
+  .flex.middle {
+    @apply items-center;
+  }
+  .flex.bottom {
+    @apply items-end;
+  }
+}
+
+@layer utilities {
+  .debug {
+    @apply border border-red-500;
+  }
+}
