@@ -6,10 +6,10 @@
   import Button from "$lib/components/button/button.svelte";
 </script>
 
-<div class="debug container mx-auto">
-  <h1 class="text-center">Pricing</h1>
+<div class="container mx-auto">
+  <h1 class="my-4 text-center">Pricing</h1>
 
-  <div class="grid grid-cols-3 gap-8">
+  <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
     <Card>
       <CardHeader title="Trail"></CardHeader>
       <CardContent>
@@ -20,7 +20,7 @@
         </ul>
       </CardContent>
       <CardActions>
-        <Button onclick={() => console.log("launch")}>launch</Button>
+        <Button onclick={() => console.log("start for free")}>start for free</Button>
       </CardActions>
     </Card>
 
@@ -31,12 +31,12 @@
           <li>1</li>
           <li>2</li>
           <li>3</li>
-          <li>3</li>
-          <li>3</li>
+          <li>4</li>
+          <li>5</li>
         </ul>
       </CardContent>
       <CardActions>
-        <Button onclick={() => console.log("launch")}>launch</Button>
+        <Button onclick={() => console.log("buy now")}>buy now</Button>
       </CardActions>
     </Card>
 
@@ -54,15 +54,17 @@
         </ul>
       </CardContent>
       <CardActions>
-        <Button onclick={() => console.log("launch")}>launch</Button>
+        <Button onclick={() => console.log("contact sales")}>sales</Button>
       </CardActions>
     </Card>
   </div>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
-    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  </p>
 </div>
+
+<style>
+  /* todo: refactor me */
+
+  li {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+</style>

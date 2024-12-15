@@ -8,6 +8,6 @@
   const { children }: HTMLAttributes<HTMLDivElement> = $props();
 </script>
 
-<div class="min-h-max">
+<div class="p-4">
   {@render children?.()}
 </div>
