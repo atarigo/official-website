@@ -1,11 +1,14 @@
 <script lang="ts" module>
+  import type { Snippet } from "svelte";
   import type { HTMLAttributes } from "svelte/elements";
 
-  // export interface CardContentProps extends HTMLAttributes<HTMLDivElement> {}
+  export interface CardContentProps extends HTMLAttributes<HTMLDivElement> {
+    children: Snippet;
+  }
 </script>
 
 <script>
-  const { children }: HTMLAttributes<HTMLDivElement> = $props();
+  const { children }: CardContentProps = $props();
 </script>
 
 <div class="p-4">
