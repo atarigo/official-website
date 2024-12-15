@@ -37,6 +37,10 @@
     "vitest": "^2.0.4"
   },
   "dependencies": {
-    "@tabler/icons-svelte": "^3.24.0"
+    "@tabler/icons-svelte": "^3.24.0",
+    "@zag-js/avatar": "^0.78.3",
+    "@zag-js/menu": "^0.78.3",
+    "@zag-js/svelte": "^0.78.3",
+    "@zag-js/tooltip": "^0.78.3"
   }
 }
