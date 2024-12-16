@@ -2,7 +2,6 @@
   import { onMount } from "svelte";
   import ClerkUserButton from "$lib/clerk/clerk-user-button.svelte";
   import ClerkSignInButton from "$lib/clerk/clerk-sign-in-button.svelte";
-  import ClerkSignOutButton from "$lib/clerk/clerk-sign-out-button.svelte";
 
   let inputElement: HTMLInputElement;
 
