@@ -3,7 +3,7 @@
   import type { HTMLAttributes } from "svelte/elements";
 
   export interface ClerkSignOutButtonProps extends HTMLAttributes<HTMLDivElement> {
-    children: Snippet;
+    children?: Snippet;
   }
 </script>
 
