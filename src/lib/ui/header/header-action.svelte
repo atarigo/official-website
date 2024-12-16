@@ -1,5 +1,7 @@
 <script lang="ts">
   import { onMount } from "svelte";
+  import ClerkUserButton from "$lib/clerk/clerk-user-button.svelte";
+  import ClerkSignInButton from "$lib/clerk/clerk-sign-in-button.svelte";
 
   let inputElement: HTMLInputElement;
 
@@ -19,6 +21,8 @@
   });
 </script>
 
-<div class="hidden md:block">
+<div class="middle hidden gap-4 md:flex">
   <input bind:this={inputElement} type="text" placeholder="Search" class="rounded px-2" />
+  <ClerkSignInButton />
+  <ClerkUserButton />
 </div>

@@ -37,6 +37,7 @@
     "vitest": "^2.0.4"
   },
   "dependencies": {
+    "@clerk/clerk-js": "^5.42.1",
     "@tabler/icons-svelte": "^3.24.0",
     "@zag-js/avatar": "^0.78.3",
     "@zag-js/menu": "^0.78.3",
